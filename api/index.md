@@ -18,11 +18,10 @@ All data is sent and received as JSON.
 
 ### Current Version
 
-The DeckBrew API is currentlt in **beta**. Backwards incompatible changes
-may be made at any time. While in beta, the DeckBrew API will return a custom
-`Content-Type` header.
+The DeckBrew API is currently in **beta**. Backwards incompatible changes
+may be made at any time. 
 
-> Content-Type: application/vnd.deckbrew.beta+json
+> Content-Type: application/json
 
 ### Pagination
 
@@ -37,9 +36,7 @@ will return the first page.
 #### Link Header
 
 The pagination info is included in the Link header. It is important to follow
-these Link header values instead of constructing your own URLs. In some
-instances, such as in the Commits API, pagination is based on SHA1 and not on
-page number.
+these Link header values instead of constructing your own URLs.
 
     Link: <https://api.deckbrew.com/mtg/cards?page=3>; rel="next",
       <https://api.deckbrew.com/mtg/cards?page=1>; rel="prev"
@@ -72,7 +69,7 @@ of errors for a given request.
 ### List all cards
 
 Return a list of all Magic cards. Can be filtered using query string parameters
-to narrowthe search.
+to narrow the search.
 
 > GET /mtg/cards
 
@@ -110,8 +107,8 @@ to narrowthe search.
 ```
 #### Card Filtering
 
-Cards can be filtering using query string parameters. Multiple parameters of
-the same name are evaluated as OR statements. For example, the query below will
+Cards can be filtering using query string parameters. Parameters with the
+**same name** are evaluated as OR statements. For example, the query below will
 find all red or blue rare cards in Unhinged.
 
 > GET /mtg/cards?set=UNH&color=red&color=blue&rarity=rare
@@ -120,9 +117,9 @@ find all red or blue rare cards in Unhinged.
 | ---- | ---- | ----------- |
 | `type` | `[]string` |  Any valid card type. Possible values include `enchantment` and|`artifact`. |
 | `subtype` | `[]string` | Any valid card subtype. Possible values include `zombie` and `tribal`. |
-| `supertype` | `[]string` | Any calid cart supertype, such as `legendary`|
+| `supertype` | `[]string` | Any valid card supertype, such as `legendary`|
 | `name` | `string` | A fuzzy match on a card's name |
-| `set` | `[]string` | A three letter identirier for a Magic set |
+| `set` | `[]string` | A three letter identifier for a Magic set |
 | `rarity` | `[]string` | Select cards printed at this rarity |
 | `color` | `[]string` | Select cards of the chosen color |
 ### Get a single card
@@ -235,4 +232,71 @@ Burn](https://api.deckbrew.com/mtg/editions/369080).
   "type": "expansion",
   "url": "http://localhost:3000/mtg/sets/ARB"
 }
+```
+
+## Magic Types and Colors
+
+These endpoints provide a list of possible values for specific search terms.
+
+### List all types
+
+> GET /mtg/types
+
+```js
+[
+  "artifact",
+  "creature",
+  "enchantment",
+  "instant",
+  "land",
+  "phenomenon",
+  "plane",
+  "planeswalker",
+  "scheme",
+  "sorcery",
+  "tribal",
+  "vanguard"
+]
+```
+
+### List all supertypes
+
+> GET /mtg/supertypes
+
+```js
+[
+  "basic",
+  "legendary",
+  "ongoing",
+  "snow",
+  "world"
+]
+```
+
+### List all subtypes
+
+> GET /mtg/subtypes
+
+```js
+[
+  "advisor",
+  "ajani",
+  "alara",
+  "ally",
+  "angel",
+  "anteater",
+]
+```
+### List all colors
+
+> GET /mtg/colors
+
+```js
+[
+  "black",
+  "blue",
+  "green",
+  "red",
+  "white"
+]
 ```
