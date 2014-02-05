@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Magic: The Gathering API Documentation
+title: "Magic: The Gathering API Documentation"
 nav-api: active
 ---
 
