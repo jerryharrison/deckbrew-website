@@ -126,7 +126,7 @@ find all red or blue rare cards in Unhinged.
 | `name` | `[]string` | A fuzzy match on a card's name |
 | `oracle` | `[]string` | A fuzzy match on a card's Oracle rules text |
 | `set` | `[]string` | A three letter identifier for a Magic set |
-| `rarity` | `[]string` | Select cards printed at this rarity. Options are `common`, `uncommon`, `rare` and `mythic rare`|
+| `rarity` | `[]string` | Select cards printed at this rarity. Options are `common`, `uncommon`, `rare` and `mythic`|
 | `color` | `[]string` | Select cards of the chosen color |
 | `multiverseid` | `[]string` | Select cards of that have at least one edition with the given Multiverse ID |
 | `format` | `[]string` | Only show cards from a format's card pool. Legal values are `vintage`, `legacy`, `modern`, `standard`, and `commander` |
@@ -138,6 +138,20 @@ A specific print of a card or cards identified by it's [Multiverse
 ID](http://gatherer.wizards.com/pages/Help.aspx). By filtering on  endpoint always returns
 an array of cards, as certain prints contain for than one card, such as the
 split card [Turn // Burn](https://api.deckbrew.com/mtg/cards?multiverseid=369080).
+
+#### Search examples
+
+All red or blue rares with "fire" in their name:
+
+> https://api.deckbrew.com/mtg/cards?color=red&color=blue&rarity=rare&name=fire
+
+All black zombies from Onslaught block:
+
+> https://api.deckbrew.com/mtg/cards?set=ons&set=scg&set=lgn&subtype=zombie&color=black
+
+All cards that reference winning or lose the game
+
+> https://api.deckbrew.com/mtg/cards?oracle=win+the+game&oracle=lose+the+game
 
 ### Get a single card
 
