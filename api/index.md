@@ -126,7 +126,7 @@ find all red or blue rare cards in Unhinged.
 | `name` | `[]string` | A fuzzy match on a card's name |
 | `oracle` | `[]string` | A fuzzy match on a card's Oracle rules text |
 | `set` | `[]string` | A three letter identifier for a Magic set |
-| `rarity` | `[]string` | Select cards printed at this rarity |
+| `rarity` | `[]string` | Select cards printed at this rarity. Options are `common`, `uncommon`, `rare` and `mythic rare`|
 | `color` | `[]string` | Select cards of the chosen color |
 | `multiverseid` | `[]string` | Select cards of that have at least one edition with the given Multiverse ID |
 | `format` | `[]string` | Only show cards from a format's card pool. Legal values are `vintage`, `legacy`, `modern`, `standard`, and `commander` |
@@ -137,7 +137,7 @@ find all red or blue rare cards in Unhinged.
 A specific print of a card or cards identified by it's [Multiverse
 ID](http://gatherer.wizards.com/pages/Help.aspx). By filtering on  endpoint always returns
 an array of cards, as certain prints contain for than one card, such as the
-split card [Turn // Burn](https://api.deckbrew.com/mtg/editions/369080).
+split card [Turn // Burn](https://api.deckbrew.com/mtg/cards?multiverseid=369080).
 
 ### Get a single card
 
