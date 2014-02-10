@@ -102,7 +102,7 @@ to narrow the search.
         flavor: "The overconfident are the most vulnerable.",
         number: "73",
         layout: "normal",
-        url: "https://api.deckbrew.com/mtg/editions/12414",
+        url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
         image_url: "http://mtgimage.com/multiverseid/12414.jpg",
         set_url: "https://api.deckbrew.com/mtg/sets/ULG"
       }
@@ -171,7 +171,7 @@ split card [Turn // Burn](https://api.deckbrew.com/mtg/editions/369080).
       flavor: "The overconfident are the most vulnerable.",
       number: "73",
       layout: "normal",
-      url: "https://api.deckbrew.com/mtg/editions/12414",
+      url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
       image_url: "http://mtgimage.com/multiverseid/12414.jpg",
       set_url: "https://api.deckbrew.com/mtg/sets/ULG"
     }
@@ -192,7 +192,8 @@ split card [Turn // Burn](https://api.deckbrew.com/mtg/editions/369080).
     "name": "Alara Reborn",
     "border": "black",
     "type": "expansion",
-    "url": "http://localhost:3000/mtg/sets/ARB"
+    "url": "https://api.deckbrew.com/mtg/sets/ARB",
+    "cards_url": "https://api.deckbrew.com/mtg/cards?set=ARB"
   }
 ]
 ```
@@ -208,7 +209,8 @@ split card [Turn // Burn](https://api.deckbrew.com/mtg/editions/369080).
   "name": "Alara Reborn",
   "border": "black",
   "type": "expansion",
-  "url": "http://localhost:3000/mtg/sets/ARB"
+  "url": "https://api.deckbrew.com/mtg/sets/ARB",
+  "cards_url": "https://api.deckbrew.com/mtg/cards?set=ARB"
 }
 ```
 
