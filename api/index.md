@@ -110,6 +110,7 @@ to narrow the search.
   }
 ]
 ```
+
 #### Card filtering
 
 Cards can be filtering using query string parameters. Parameters with the
@@ -128,6 +129,7 @@ find all red or blue rare cards in Unhinged.
 | `set` | `[]string` | A three letter identifier for a Magic set |
 | `rarity` | `[]string` | Select cards printed at this rarity. Options are `common`, `uncommon`, `rare` and `mythic`|
 | `color` | `[]string` | Select cards of the chosen color |
+| `multicolor` | `bool` | Only show cards that are multicolored. Legal values are `true` and `false` |
 | `multiverseid` | `[]string` | Select cards of that have at least one edition with the given Multiverse ID |
 | `format` | `[]string` | Only show cards from a format's card pool. Legal values are `vintage`, `legacy`, `modern`, `standard`, and `commander` |
 | `status` | `[]string` | Only show cards with the given status. Legal values are `legal`, `banned` or `restricted` |
@@ -143,15 +145,15 @@ split card [Turn // Burn](https://api.deckbrew.com/mtg/cards?multiverseid=369080
 
 All red or blue rares with "fire" in their name:
 
-> https://api.deckbrew.com/mtg/cards?color=red&color=blue&rarity=rare&name=fire
+<https://api.deckbrew.com/mtg/cards?color=red&color=blue&rarity=rare&name=fire>
 
 All black zombies from Onslaught block:
 
-> https://api.deckbrew.com/mtg/cards?set=ons&set=scg&set=lgn&subtype=zombie&color=black
+<https://api.deckbrew.com/mtg/cards?set=ons&set=scg&set=lgn&subtype=zombie&color=black>
 
 All cards that reference winning or lose the game
 
-> https://api.deckbrew.com/mtg/cards?oracle=win+the+game&oracle=lose+the+game
+<https://api.deckbrew.com/mtg/cards?oracle=win+the+game&oracle=lose+the+game>
 
 ### Get a single card
 
@@ -192,6 +194,24 @@ All cards that reference winning or lose the game
   ]
 }
 ```
+
+### Typeahead autocomplete for card search
+
+> /mtg/cards/typeahead
+
+This endpoint returns a list of 10 cards (the same format as the `/mtg/cards`
+endpoint) that match the beginning of the search term. This endpoint is great
+for building interactive autocomplete search for Magic cards. 
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| `q` | `string` |  Card name prefix search |
+
+#### Examples
+
+The first 10 cards that start with `Sele` sorted in alphabetical order.
+
+<https://api.deckbrew.com/mtg/cards/typeahead?q=sele>
 
 ## Magic Sets
 
