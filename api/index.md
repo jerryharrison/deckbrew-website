@@ -66,6 +66,10 @@ of errors for a given request.
 
 ## Magic Cards
 
+Prices are in USD cents. Pricing information is provided by the wonderful
+[TCGPlayer](http://store.tcgplayer.com?partner=DECKBREW) and updated every
+hour.
+
 ### List all cards
 
 Return a list of all Magic cards. Can be filtered using query string parameters
@@ -77,8 +81,9 @@ to narrow the search.
 [
   {
     name: "About Face",
-    id: "05194b17e11a7a45c7820c13f3ba8cbc",
-    url: "https://api.deckbrew.com/mtg/cards/05194b17e11a7a45c7820c13f3ba8cbc",
+    id: "about-face",
+    url: "https://api.deckbrew.com/mtg/cards/about-face",
+    store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face",
     types: [
       "instant"
     ],
@@ -102,9 +107,15 @@ to narrow the search.
         flavor: "The overconfident are the most vulnerable.",
         number: "73",
         layout: "normal",
+        price: {
+            low: 89,
+            average: 154,
+            high: 198
+        },
         url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
         image_url: "http://mtgimage.com/multiverseid/12414.jpg",
-        set_url: "https://api.deckbrew.com/mtg/sets/ULG"
+        set_url: "https://api.deckbrew.com/mtg/sets/ULG",
+        store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
       }
     ]
   }
@@ -162,8 +173,9 @@ All cards that reference winning or lose the game
 ```js
 {
   name: "About Face",
-  id: "05194b17e11a7a45c7820c13f3ba8cbc",
-  url: "https://api.deckbrew.com/mtg/cards/05194b17e11a7a45c7820c13f3ba8cbc",
+  id: "about-face",
+  url: "https://api.deckbrew.com/mtg/cards/about-face",
+  store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face",
   types: [
     "instant"
   ],
@@ -187,9 +199,15 @@ All cards that reference winning or lose the game
       flavor: "The overconfident are the most vulnerable.",
       number: "73",
       layout: "normal",
+      price: {
+          low: 89,
+          average: 154,
+          high: 198
+      },
       url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
       image_url: "http://mtgimage.com/multiverseid/12414.jpg",
-      set_url: "https://api.deckbrew.com/mtg/sets/ULG"
+      set_url: "https://api.deckbrew.com/mtg/sets/ULG",
+      store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
     }
   ]
 }
