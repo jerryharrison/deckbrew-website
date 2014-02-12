@@ -207,7 +207,7 @@ All cards that reference winning or lose the game
       url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
       image_url: "http://mtgimage.com/multiverseid/12414.jpg",
       set_url: "https://api.deckbrew.com/mtg/sets/ULG",
-      store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
+      store_url: "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
     }
   ]
 }
