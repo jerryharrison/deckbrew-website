@@ -80,42 +80,42 @@ to narrow the search.
 ```js
 [
   {
-    name: "About Face",
-    id: "about-face",
-    url: "https://api.deckbrew.com/mtg/cards/about-face",
-    store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face",
-    types: [
+    "name": "About Face",
+    "id": "about-face",
+    "url": "https://api.deckbrew.com/mtg/cards/about-face",
+    "store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face",
+    "types": [
       "instant"
     ],
-    colors: [
+    "colors": [
       "red"
     ],
-    cmc: 1,
-    cost: "{R}",
-    text: "Switch target creature's power and toughness until end of turn.",
-    formats: {
-      commander: "legal",
-      legacy: "legal",
-      vintage: "legal"
+    "cmc": 1,
+    "cost": "{R}",
+    "text": "Switch target creature's power and toughness until end of turn.",
+    "formats": {
+      "commander": "legal",
+      "legacy": "legal",
+      "vintage": "legal"
     },
-    editions: [
+    "editions": [
       {
-        set: "Urza's Legacy",
-        rarity: "common",
-        artist: "Melissa A. Benson",
-        multiverse_id: 12414,
-        flavor: "The overconfident are the most vulnerable.",
-        number: "73",
-        layout: "normal",
-        price: {
-            low: 89,
-            average: 154,
-            high: 198
+        "set": "Urza's Legacy",
+        "rarity": "common",
+        "artist": "Melissa A. Benson",
+        "multiverse_id": 12414,
+        "flavor": "The overconfident are the most vulnerable.",
+        "number": "73",
+        "layout": "normal",
+        "price": {
+            "low": 89,
+            "average": 154,
+            "high": 198
         },
-        url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
-        image_url: "http://mtgimage.com/multiverseid/12414.jpg",
-        set_url: "https://api.deckbrew.com/mtg/sets/ULG",
-        store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
+        "url": "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
+        "image_url": "http://mtgimage.com/multiverseid/12414.jpg",
+        "set_url": "https://api.deckbrew.com/mtg/sets/ULG",
+        "store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
       }
     ]
   }
@@ -172,42 +172,42 @@ All cards that reference winning or lose the game
 
 ```js
 {
-  name: "About Face",
-  id: "about-face",
-  url: "https://api.deckbrew.com/mtg/cards/about-face",
-  store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face",
-  types: [
+  "name": "About Face",
+  "id": "about-face",
+  "url": "https://api.deckbrew.com/mtg/cards/about-face",
+  "store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face",
+  "types": [
     "instant"
   ],
-  colors: [
+  "colors": [
     "red"
   ],
-  cmc: 1,
-  cost: "{R}",
-  text: "Switch target creature's power and toughness until end of turn.",
-  formats: {
-    commander: "legal",
-    legacy: "legal",
-    vintage: "legal"
+  "cmc": 1,
+  "cost": "{R}",
+  "text": "Switch target creature's power and toughness until end of turn.",
+  "formats": {
+    "commander": "legal",
+    "legacy": "legal",
+    "vintage": "legal"
   },
-  editions: [
+  "editions": [
     {
-      set: "Urza's Legacy",
-      rarity: "common",
-      artist: "Melissa A. Benson",
-      multiverse_id: 12414,
-      flavor: "The overconfident are the most vulnerable.",
-      number: "73",
-      layout: "normal",
-      price: {
-          low: 89,
-          average: 154,
-          high: 198
+      "set": "Urza's Legacy",
+      "rarity": "common",
+      "artist": "Melissa A. Benson",
+      "multiverse_id": 12414,
+      "flavor": "The overconfident are the most vulnerable.",
+      "number": "73",
+      "layout": "normal",
+      "price": {
+          "low": 89,
+          "average": 154,
+          "high": 198
       },
-      url: "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
-      image_url: "http://mtgimage.com/multiverseid/12414.jpg",
-      set_url: "https://api.deckbrew.com/mtg/sets/ULG",
-      store_url: "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
+      "url": "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
+      "image_url": "http://mtgimage.com/multiverseid/12414.jpg",
+      "set_url": "https://api.deckbrew.com/mtg/sets/ULG",
+      "store_url": "http://store.tcgplayer.com/magic/urzas-legacy/about-face"
     }
   ]
 }
