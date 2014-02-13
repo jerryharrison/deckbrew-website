@@ -24,3 +24,7 @@
   display: inline-block;
   width: 200px;
 }
+
+div.active {
+  background: red;
+}
