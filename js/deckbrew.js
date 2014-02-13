@@ -1,6 +1,9 @@
 /**
  * @jsx React.DOM
  */
+
+var Cache = {};
+
 var Card = React.createClass({
   render: function() {
     return (
@@ -14,8 +17,27 @@ var CardSearchForm = React.createClass({
     return {value: ''};
   },
   handleChange: function(event) {
-    this.props.onSearch({name: event.target.value});
+    var query = event.target.value;
     this.setState({value: event.target.value});
+
+    if (query == "") {
+      return this.props.onSearch([]);
+    }
+
+    if (Cache[query] !== undefined) {
+      return this.props.onSearch(Cache[query]); 
+    }
+
+    $.ajax({
+      url: 'https://api.deckbrew.com/mtg/cards/typeahead?q=' + query,
+      dataType: 'json',
+      success: function(data) {
+        this.props.onSearch(data);
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.error("DeckBrew API", status, err.toString());
+      }.bind(this)
+    });
   },
   render: function() {
     var value = this.state.value;
@@ -44,8 +66,8 @@ var CardSearchBox = React.createClass({
   getInitialState: function() {
     return {cards: []};
   },
-  handleSearch: function(card) {
-    this.setState({cards: this.state.cards.concat([card])});
+  handleSearch: function(cards) {
+    this.setState({cards: cards});
   },
   render: function() {
     return (
