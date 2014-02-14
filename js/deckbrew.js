@@ -63,7 +63,10 @@ var CardList = React.createClass({
   render: function() {
     var selected = this.props.selected;
     var cardNodes = this.props.cards.map(function (card) {
-      return <Card id={card.id} name={card.name} selected={selected}/>;
+      return (
+        <Card id={card.id} name={card.name} selected={selected}
+          image_url={card.editions[0].image_url}/> 
+      );
     });
     return (
       <div className="cards">
@@ -75,18 +78,42 @@ var CardList = React.createClass({
 
 var CardSearchBox = React.createClass({
   getInitialState: function() {
-    return {cards: [], selected: {id: ''}};
+    return {cards: [], selected: {id: '', name: '', editions: [{image_url: ''}]}};
   },
   handleSearch: function(cards) {
     if (cards.length > 0) {
-      this.setState({cards: cards, selected: cards[0]});
+      this.setState({
+        cards: cards,
+        index: 0,
+        selected: cards[0]
+      });
     } else {
-      this.setState({cards: cards});
+      this.setState({
+        cards: cards,
+        index: 0,
+        selected:{id: '', name: '', editions: [{image_url: ''}]},
+      });
+    }
+  },
+  handlePress: function(event) {
+    if (event.key == "Down") {
+      var i = this.state.index + 1;
+      if (i < this.state.cards.length) {
+        this.setState({index: i, selected: this.state.cards[i]});
+      }
+    }
+    if (event.key == "Up") {
+      var i = this.state.index - 1;
+      if (i >= 0) {
+        this.setState({index: i, selected: this.state.cards[i]});
+      }
     }
   },
   render: function() {
+    var card = this.state.selected;
     return (
-      <div class="box">
+      <div class="box" onKeyPress={this.handlePress}>
+        <img src={card.editions[0].image_url} alt={card.name} />
         <CardSearchForm onSearch={this.handleSearch}></CardSearchForm>
         <CardList cards={this.state.cards} selected={this.state.selected}></CardList>
       </div>
@@ -99,33 +126,3 @@ React.renderComponent(
   <CardSearchBox onSearchit={this.handleCommentSubmit}/>,
   document.getElementById('side')
 );
-
-//$(document).ready(function() {
-//  var numbers = new Bloodhound({
-//    datumTokenizer: function(d) { 
-//      return Bloodhound.tokenizers.whitespace(d.name);
-//    },
-//    queryTokenizer: Bloodhound.tokenizers.whitespace,
-//    //prefetch: 'js/prefetch.json',
-//    limit: 10,
-//    remote: {
-//      url: 'https://api.deckbrew.com/mtg/cards/typeahead?q=%QUERY',
-//      rateLimitWait: 50,
-//    }
-//  });
-//  
-//  // initialize the bloodhound suggestion engine
-//  numbers.initialize();
-//  
-//  // instantiate the typeahead UI
-//  $('.typeahead').typeahead({autoselect: true, highlight: true}, {
-//    displayKey: 'name',
-//    source: numbers.ttAdapter()
-//  });
-//
-//  $('.typeahead').on('typeahead:selected', function(jevent, suggestion, dataset) {
-//    $('.typeahead').typeahead('val', '');
-//    $("#images").append($('<img/>').attr('src', suggestion.editions[0].image_url));
-//  });
-//
-//});

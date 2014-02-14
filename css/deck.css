@@ -9,7 +9,7 @@
   bottom: 0;
   left: 0;
   width: 300px;
-  background: #ddd;
+  background: #eee;
 }
 
 #images {
@@ -25,6 +25,29 @@
   width: 200px;
 }
 
+div.card {
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
 div.active {
-  background: red;
+  background: #ddd;
+}
+
+#side form {
+  padding: 10px;
+}
+
+#side img {
+  height: 425px;
+  display: block;
+}
+
+#side input {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+  border: 0;
+  line-height: 24px;
+  font-size: 20px;
 }
