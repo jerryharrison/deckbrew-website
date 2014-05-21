@@ -39,7 +39,8 @@ div.active {
 }
 
 #side img {
-  height: 425px;
+  height: 300px;
+  margin: 0 auto;
   display: block;
 }
 

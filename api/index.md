@@ -30,7 +30,7 @@ You can specify further pages with the `?page` parameter.
 
     $ curl https://api.deckbrew.com/mtg/cards?page=2
 
-Note that page numbering is 1-based and that omitting the `?page` parameter
+Note that page numbering is 0-based and that omitting the `?page` parameter
 will return the first page.
 
 #### Link Header
@@ -47,6 +47,8 @@ The possible `rel` values are:
 | ---- | ----------- |
 | next | Shows the URL of the immediate next page of results.| 
 | prev | Shows the URL of the immediate previous page of results. |
+
+
 
 ### Errors
 
@@ -142,15 +144,16 @@ find all red or blue rare cards in Unhinged.
 | `color` | `[]string` | Select cards of the chosen color |
 | `multicolor` | `bool` | Only show cards that are multicolored. Legal values are `true` and `false` |
 | `multiverseid` | `[]string` | Select cards of that have at least one edition with the given Multiverse ID |
-| `format` | `[]string` | Only show cards from a format's card pool. Legal values are `vintage`, `legacy`, `modern`, `standard`, and `commander` |
+| `format` | `[]string` | Only show cards allowed in a specific format. Legal values are `vintage`, `legacy`, `modern`, `standard`, and `commander` |
 | `status` | `[]string` | Only show cards with the given status. Legal values are `legal`, `banned` or `restricted` |
 
 #### Get cards for a Multiverse ID
 
 A specific print of a card or cards identified by it's [Multiverse
-ID](http://gatherer.wizards.com/pages/Help.aspx). By filtering on  endpoint always returns
-an array of cards, as certain prints contain for than one card, such as the
-split card [Turn // Burn](https://api.deckbrew.com/mtg/cards?multiverseid=369080).
+ID](http://gatherer.wizards.com/pages/Help.aspx). By filtering on  endpoint
+always returns an array of cards, as certain prints contain for than one card,
+such as the split card [Turn //
+Burn](https://api.deckbrew.com/mtg/cards?multiverseid=369080).
 
 #### Search examples
 
