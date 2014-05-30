@@ -16,7 +16,7 @@ or bugs you encounter. This API wouldn't have been possible without the amazing
 All API access is over HTTPS, and accessed from the `api.deckbrew.com` domain.
 All data is sent and received as JSON.
 
-## Projects Using the DeckBrew API
+### Projects Using the DeckBrew API
 
 - [Magic Card Viewer and Pricer by Zachary Wilson](https://play.google.com/store/apps/details?id=com.zach.wilson.magic.app)
 - [MTG PriceFinder by Ken Briscoe](http://www.mtgne.com/)
