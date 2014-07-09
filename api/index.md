@@ -149,6 +149,7 @@ find all red or blue rare cards in Unhinged.
 | `color` | `[]string` | Select cards of the chosen color |
 | `multicolor` | `bool` | Only show cards that are multicolored. Legal values are `true` and `false` |
 | `multiverseid` | `[]string` | Select cards of that have at least one edition with the given Multiverse ID |
+| `m` | `[]string` | Shortcut for Multiverse ID |
 | `format` | `[]string` | Only show cards allowed in a specific format. Legal values are `vintage`, `legacy`, `modern`, `standard`, and `commander` |
 | `status` | `[]string` | Only show cards with the given status. Legal values are `legal`, `banned` or `restricted` |
 
