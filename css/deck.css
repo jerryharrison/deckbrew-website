@@ -4,7 +4,6 @@
 }
 
 body {
-  background: #ddd;
   padding: 7px;
 }
 
@@ -43,7 +42,7 @@ div.panel-title {
 div.panel {
   font-size: 14px;
   font-family: Tahoma, sans-serif;
-  background: #fff;
+  background: #ddd;
   border: #bbb 1px solid;
   border-radius: 4px;
 }
