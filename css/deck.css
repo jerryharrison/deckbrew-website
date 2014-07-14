@@ -3,6 +3,11 @@
   background-color: #0097cf;
 }
 
+body {
+  background: #ddd;
+  padding: 7px;
+}
+
 #side {
   position: absolute;
   top: 0;
@@ -25,9 +30,39 @@
   width: 200px;
 }
 
-div.card {
+div.panel-title {
   padding: 5px 10px;
-  font-size: 20px;
+  border-bottom: #bbb 1px solid;
+}
+
+#cards {
+  padding: 10px;
+  display: block;
+}
+
+div.panel {
+  font-size: 14px;
+  font-family: Tahoma, sans-serif;
+  background: #fff;
+  border: #bbb 1px solid;
+  border-radius: 4px;
+}
+
+div.card {
+  font-size: 16px;
+  background: #dbb6a2;
+  border-radius: 4px;
+  padding: 5px 10px;
+  border-bottom: 2px solid grey;
+  margin-bottom: 2px;
+}
+
+div.card img {
+  float: right;
+  margin-top: 2px;
+  margin-left: 1px;
+  border: 0;
+  display: inline-block;
 }
 
 div.active {
