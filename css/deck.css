@@ -39,6 +39,10 @@ div.panel-title {
   display: block;
 }
 
+div.entry {
+  text-align: center;
+}
+
 div.panel {
   font-size: 14px;
   font-family: Tahoma, sans-serif;
@@ -47,13 +51,21 @@ div.panel {
   border-radius: 4px;
 }
 
+span.count {
+  padding: 0px 3px;
+  color: #666;
+}
+
 div.card {
+  text-align: left;
+  display: inline-block;
   font-size: 16px;
   background: #dbb6a2;
   border-radius: 4px;
   padding: 5px 10px;
   border-bottom: 2px solid grey;
   margin-bottom: 2px;
+  width: 265px;
 }
 
 div.card img {
