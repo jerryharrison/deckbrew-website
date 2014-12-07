@@ -8,9 +8,7 @@ nav-api: active
 
 ## Overview
 
-The DeckBrew Magic: The Gathering API is [open
-source](https://github.com/kyleconroy/deckbrew-api).  Please report any issues
-or bugs you encounter. This API wouldn't have been possible without the amazing
+Please report any issues or bugs you encounter on [the issue tracker](http://github.com/kyleconroy/deckbrew-feedback). This API wouldn't have been possible without the amazing
 [mtgjson](http://mtgjson.com) and [mtgimage](http://mtgimage.com) resources.
 
 All API access is over HTTPS, and accessed from the `api.deckbrew.com` domain.
