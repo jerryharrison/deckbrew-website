@@ -12,7 +12,9 @@ description: >
 ## Overview
 
 The DeckBrew API is the easiest way to get Magic: The Gathering information
-into your application. This API wouldn't have been possible without the amazing
+into your application. It's free to use with no sign-up required.
+
+This API wouldn't have been possible without the amazing
 [mtgjson](http://mtgjson.com) and [mtgimage](http://mtgimage.com) resources.
 
 All API access is over HTTPS, and accessed from the `api.deckbrew.com` domain.
