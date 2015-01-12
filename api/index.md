@@ -1,32 +1,28 @@
 ---
 layout: default
-title: "Magic: The Gathering API Documentation"
+title: "Deckbrew - Magic: The Gathering API"
 nav-api: active
+description: >
+  DeckBrew's JSON API is the easiest way to access Magic: The Gathering card information
+  It's free to use with no sign-up required.
 ---
 
 # API
 
 ## Overview
 
-The DeckBrew Magic: The Gathering API is [open
-source](https://github.com/kyleconroy/deckbrew-api).  Please report any issues
-or bugs you encounter. This API wouldn't have been possible without the amazing
+The DeckBrew API is the easiest way to get Magic: The Gathering information
+into your application. This API wouldn't have been possible without the amazing
 [mtgjson](http://mtgjson.com) and [mtgimage](http://mtgimage.com) resources.
 
 All API access is over HTTPS, and accessed from the `api.deckbrew.com` domain.
+
 All data is sent and received as JSON.
 
 ### Projects Using the DeckBrew API
 
 - [Magic Card Viewer and Pricer by Zachary Wilson](https://play.google.com/store/apps/details?id=com.zach.wilson.magic.app)
 - [MTG PriceFinder by Ken Briscoe](http://www.mtgne.com/)
-
-### Current Version
-
-The DeckBrew API is currently in **beta**. Backwards incompatible changes
-may be made at any time. 
-
-> Content-Type: application/json
 
 ### Pagination
 
@@ -73,9 +69,9 @@ of errors for a given request.
 
 ## Magic Cards
 
-Prices are in USD cents. Pricing information is provided by the wonderful
-[TCGPlayer](http://store.tcgplayer.com?partner=DECKBREW) and updated every
-hour.
+Due to a misundestanding between TCGPlayer and Deckbrew, prices are no longer
+available in the API. To prevent breaking existing applications, all prices
+have been set to zero.
 
 ### List all cards
 
@@ -115,9 +111,9 @@ to narrow the search.
         "number": "73",
         "layout": "normal",
         "price": {
-            "low": 89,
-            "average": 154,
-            "high": 198
+            "low": 0,
+            "average": 0,
+            "high": 0
         },
         "url": "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
         "image_url": "http://mtgimage.com/multiverseid/12414.jpg",
@@ -209,9 +205,9 @@ All cards that reference winning or lose the game
       "number": "73",
       "layout": "normal",
       "price": {
-          "low": 89,
-          "average": 154,
-          "high": 198
+          "low": 0,
+          "average": 0,
+          "high": 0
       },
       "url": "https://api.deckbrew.com/mtg/cards?multiverseid=12414",
       "image_url": "http://mtgimage.com/multiverseid/12414.jpg",

@@ -49,6 +49,7 @@ div.panel {
   background: #ddd;
   border: #bbb 1px solid;
   border-radius: 4px;
+  margin-bottom: 7px;
 }
 
 span.count {
@@ -59,22 +60,90 @@ span.count {
   text-align: right;
 }
 
-div.card {
+a.card {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
   text-align: left;
   display: inline-block;
+  text-decoration: none;
+  color: #000;
   font-size: 16px;
-  background: #dbb6a2;
   border-radius: 4px;
-  padding: 5px 10px;
+  padding: 7px 10px;
   border-bottom: 2px solid grey;
   margin-bottom: 2px;
   width: 265px;
 }
 
-div.card img {
+a.card:visited {
+  color: #000;
+}
+
+a.card:active, a.card:hover {
+  color: #000;
+}
+
+
+.frame-r {
+  background: #dbb6a2;
+}
+
+.frame-g {
+  background: #c3c8b4;
+}
+
+/* Hybrid mana frame */
+.frame-h {
+  background: #cfbeb5;
+}
+
+div.cost  {
+  float: right;
+  padding-top: 3px;
+}
+
+div.cost > i {
+  float: left;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url('../mana.png');
+  background-repeat: no-repeat;
+}
+
+.sym-x {
+  background-position: 0px -15px;
+}
+
+.sym-1 {
+  background-position: -30px 0px;
+}
+
+.sym-2 {
+  background-position: -15px -15px;
+}
+
+.sym-3 {
+  background-position: -30px -15px;
+}
+
+.sym-4 {
+  background-position: 0px -30px;
+}
+
+.sym-g {
+  background-position: 0px 0px;
+}
+
+.sym-rg {
+  background-position: -15px 0px;
+}
+
+
+
+a.card img {
   float: right;
   margin-top: 2px;
-  margin-left: 1px;
+  margin-left: 1pxhr
   border: 0;
   display: inline-block;
 }
@@ -100,4 +169,33 @@ div.active {
   border: 0;
   line-height: 24px;
   font-size: 20px;
+}
+
+#preview {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 4px;
+  padding: 14px;
+  display: none;
+}
+
+#preview img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 90%;
+}
+
+div.button-group > button {
+  display: inline-block;
+  font-size: 20px;
+  padding: 10px;
+}
+
+div.button-group  {
+  max-width: 300px;
+  margin: 0 auto;
 }
