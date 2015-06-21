@@ -155,7 +155,7 @@ find all red or blue rare cards in Unhinged.
 
 A specific print of a card or cards identified by it's [Multiverse
 ID](http://gatherer.wizards.com/pages/Help.aspx). By filtering on  endpoint
-always returns an array of cards, as certain prints contain for than one card,
+always returns an array of cards, as certain prints contain more than one card,
 such as the split card [Turn //
 Burn](https://api.deckbrew.com/mtg/cards?multiverseid=369080).
 
