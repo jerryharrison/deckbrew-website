@@ -1,6 +1,6 @@
 name: DeckBrew
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ["tables"]
-pygments: true
+highlighter: rouge
 exclude: [Makefile, Gemfile, Gemfile.lock]
